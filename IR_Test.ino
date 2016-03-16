@@ -152,12 +152,12 @@ void separate(int x) {
   int n4;
   int n5;
   int n6;
-  n1 = x % 10;
-  n2 = floor(x / 10) % 10;
-  n3 = floor(x / 100) % 10;
-  n4 = floor(x / 1000) % 10;
-  n5 = floor(x / 10000) % 10;
-  n6 = floor(x / 100000) % 10;
+  n6 = x % 10;
+  n5 = floor(x / 10) % 10;
+  n4 = floor(x / 100) % 10;
+  n3 = floor(x / 1000) % 10;
+  n2 = floor(x / 10000) % 10;
+  n1 = floor(x / 100000) % 10;
   int nums[6] = {n1,n2,n3,n4,n5,n6};
 }
 

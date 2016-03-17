@@ -482,7 +482,26 @@ void p7() {
 }
 
 void patternPicker(int x) {
-  
+  separate(x)
+  for (int i = 1; i < 6; i++) {
+    if (nums[i] = 0) {
+      p0();
+    } else if (nums[i] = 1) {
+      p1();
+    } else if (nums[i] = 2) {
+      p2();
+    } else if (nums[i] = 3) {
+      p3();
+    } else if (nums[i] = 4) {
+      p4();
+    } else if (nums[i] = 5) {
+      p5();
+    } else if (nums[i] = 6) {
+      p6();
+    } else if (nums[i] = 7) {
+      p7();
+    }
+  }
 }
 
 void loop() {
@@ -504,6 +523,7 @@ void loop() {
       Serial.println(buttonId);
       Serial.println(convertToOct(buttonId));
       Serial.println("");
+      patternPicker(buttonVal);
     }
   }
   someNum = someNum + 1;

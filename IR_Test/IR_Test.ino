@@ -81,66 +81,82 @@ void whatButton(int x){
     case 16769055:
       button="-";
       buttonId = 69005;
+      buttonVal = 206615;
       break;
     case 16754775:
       button="+";
       buttonId = 54775;
+      buttonVal = 152767;
       break;
     case 16748655:
       button="EQ";
       buttonId = 48655;
+      buttonVal = 137031;
       break;
     case 16738455:
       button="0";
       buttonId = 38455;
+      buttonVal = 113067;
       break;
     case 16750695:
       button="100+";
       buttonId = 50695;
+      buttonVal = 143007
       break;
     case 16756815:
       button="200+";
       buttonId = 56815;
+      buttonVal = 156757;
       break;
     case 16724175:
       button="1";
       buttonId = 24175;
+      buttonVal = 57157;
       break;
     case 16718055:
       button="2";
       buttonId = 18055;
+      buttonVal = 43207;
       break;
     case 16743045:
       button="3";
       buttonId = 43045;
+      buttonVal = 124045;
       break;
     case 16716015:
       button="4";
       buttonId = 16015;
+      buttonVal = 37217;
       break;
     case 16726215:
       button="5";
       buttonId = 26215;
+      buttonVal = 63147;
       break;
     case 16734885:
       button="6";
       buttonId = 34885;
+      buttonVal = 104105
       break;
     case 16728765:
       button="7";
       buttonId = 28765;
+      buttonVal = 70135;
       break;
     case 16730805:
       button="8";
       buttonId = 30805;
+      buttonVal = 74125;
       break;
     case 16732845:
       button="9";
       buttonId = 32845;
+      buttonVal = 100115;
       break;
     default:
       button="";
       buttonId = 0;
+      buttonVal = 0;
       break;
   }
 }
@@ -483,7 +499,7 @@ void p7() {
 
 void patternPicker(int x) {
   separate(x)
-  for (int i = 1; i < 6; i++) {
+  for (int i = 0; i < 6; i++) {
     if (nums[i] = 0) {
       p0();
     } else if (nums[i] = 1) {
@@ -518,7 +534,7 @@ void loop() {
   }
   delay(100); */
   if ((someNum % 1000) == 0){
-    if (buttonId != 0){
+    if (buttonVal != 0){
       Serial.println(button);
       Serial.println(buttonId);
       Serial.println(convertToOct(buttonId));

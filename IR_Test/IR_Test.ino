@@ -101,7 +101,7 @@ void whatButton(int x){
     case 16750695:
       button="100+";
       buttonId = 50695;
-      buttonVal = 143007
+      buttonVal = 143007;
       break;
     case 16756815:
       button="200+";
@@ -136,7 +136,7 @@ void whatButton(int x){
     case 16734885:
       button="6";
       buttonId = 34885;
-      buttonVal = 104105
+      buttonVal = 104105;
       break;
     case 16728765:
       button="7";
@@ -168,12 +168,12 @@ void separate(int x) {
   int n4;
   int n5;
   int n6;
-  n6 = x % 10;
-  n5 = floor(x / 10) % 10;
-  n4 = floor(x / 100) % 10;
-  n3 = floor(x / 1000) % 10;
-  n2 = floor(x / 10000) % 10;
-  n1 = floor(x / 100000) % 10;
+  n6 = int(x) % 10;
+  n5 = int(floor(x / 10)) % 10;
+  n4 = int(floor(x / 100)) % 10;
+  n3 = int(floor(x / 1000)) % 10;
+  n2 = int(floor(x / 10000)) % 10;
+  n1 = int(floor(x / 100000)) % 10;
   int nums[6] = {n1,n2,n3,n4,n5,n6};
 }
 
@@ -498,24 +498,40 @@ void p7() {
 }
 
 void patternPicker(int x) {
-  separate(x)
+  separate(x);
   for (int i = 0; i < 6; i++) {
     if (nums[i] = 0) {
       p0();
+      Serial.println(nums[i]);
+      delay(200);
     } else if (nums[i] = 1) {
       p1();
+      Serial.println(nums[i]);
+      delay(200);
     } else if (nums[i] = 2) {
       p2();
+      Serial.println(nums[i]);
+      delay(200);
     } else if (nums[i] = 3) {
       p3();
+      Serial.println(nums[i]);
+      delay(200);
     } else if (nums[i] = 4) {
       p4();
+      Serial.println(nums[i]);
+      delay(200);
     } else if (nums[i] = 5) {
       p5();
+      Serial.println(nums[i]);
+      delay(200);
     } else if (nums[i] = 6) {
       p6();
+      Serial.println(nums[i]);
+      delay(200);
     } else if (nums[i] = 7) {
       p7();
+      Serial.println(nums[i]);
+      delay(200);
     }
   }
 }
@@ -537,10 +553,11 @@ void loop() {
     if (buttonVal != 0){
       Serial.println(button);
       Serial.println(buttonId);
-      Serial.println(convertToOct(buttonId));
+      Serial.println(buttonVal);
       Serial.println("");
       patternPicker(buttonVal);
     }
   }
   someNum = someNum + 1;
 }
+
